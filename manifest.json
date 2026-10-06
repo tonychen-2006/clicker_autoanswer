@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "iClick Response Helper",
+  "version": "1.1.0",
+  "description": "Displays live response leaders and can automatically answer single-choice iClicker polls using your session.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.iclicker.com/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html", "default_title": "iClick Response Helper"},
+  "content_scripts": [
+    {
+      "matches": ["https://student.iclicker.com/*"],
+      "js": ["page-state.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://student.iclicker.com/*"],
+      "js": ["helpers.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

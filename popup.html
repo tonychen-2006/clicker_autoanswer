@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iClick Response Helper</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="helpers.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <h1>iClick Response Helper</h1>
+  <label><span>Enabled</span><input id="enabled" type="checkbox"></label>
+  <label><span>Automatically answer</span><input id="autoAnswer" type="checkbox"></label>
+  <label for="interval"><span>Refresh interval</span><select id="interval">
+    <option value="2">2 seconds</option><option value="3">3 seconds</option><option value="5">5 seconds</option>
+  </select></label>
+  <label><span>Show percentage</span><input id="showPercentage" type="checkbox"></label>
+  <p id="status" role="status" aria-live="polite">Loading...</p>
+</body>
+</html>
